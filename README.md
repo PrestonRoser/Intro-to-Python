@@ -1,4 +1,19 @@
-# Intro-to-Python
-This repository will contain projects that I made as I learned to work with and implement Python.
+# Intro to Python – Mini Projects
 
-The first project within the repository is a Standard Deviation calculate that takes input from the user to calculate the Standard Deviation of a set.
+This repository serves as a **learning log and project archive** documenting my progression while learning Python fundamentals. Each mini-project focuses on a specific concept or skill, implemented as a standalone script.
+
+The goal of this repo is not to present production-ready software, but to **demonstrate learning velocity, problem-solving, and core Python competency** through small, complete programs.
+
+---
+
+## Repository Structure
+
+```txt
+Intro-to-Python/
+├── Mini-Projects/
+│   ├── calc.py
+│   ├── stopwatch.py
+│   └── st_dev.py
+├── st_dev.py
+├── LICENSE
+└── README.md
