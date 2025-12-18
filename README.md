@@ -14,6 +14,5 @@ Intro-to-Python/
 │   ├── calc.py
 │   ├── stopwatch.py
 │   └── st_dev.py
-├── st_dev.py
 ├── LICENSE
 └── README.md
