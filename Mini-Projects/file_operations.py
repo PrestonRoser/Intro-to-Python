@@ -15,6 +15,31 @@ from datetime import datetime
 #   - Interactive operation menu with single-character command shortcuts
 #   - Confirmation prompts before executing destructive operations (overwrites, deletions)
 
+# Necessary Improvements / Known Limitations
+#
+# The following items document immediate technical limitations identified during development. These are intentionally noted
+# as part of the learning process and reflect areas that require correction for full correctness or robustness.
+#
+# - File Deletion Logic:
+#   The delete operation is currently bound to the active File object rather than resolving the filename explicitly provided
+#   by the user. This may result in unintended file deletion and should be corrected to ensure user-specified targets are used.
+#
+# - File Existence Handling:
+#   The program assumes the target file exists during File object initialization. Attempting to open a non-existent file will
+#   raise an exception. A validation check should precede file access to handle this case safely.
+#
+# - Recursive Menu Flow:
+#   User re-prompting is handled through recursive function calls. While functional for limited use, this approach is not ideal 
+#   for long-running programs and should be replaced with an iterative loop-based control structure.
+#
+# - Stale File State:
+#   File metadata (content and size) is cached at initialization and may become outdated following write or append operations.
+#   A refresh mechanism should be implemented to resync the object state with the filesystem.
+#
+# These limitations are acknowledged intentionally to document learning progression rather than 
+# to present a fully polished implementation.
+
+
 # Possible improvements:
 #   - Implement specific exception handling (FileNotFoundError, PermissionError) instead of bare except blocks
 #   - Add input validation for file names (empty strings, invalid characters, path traversal prevention)
